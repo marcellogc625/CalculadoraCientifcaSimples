@@ -546,7 +546,7 @@ public class FrmCalculadora extends javax.swing.JFrame {
         try{
             String resposta;
             Calculadora.setValor2(Double.parseDouble(jVisor.getText()));     
-                if (null != Calculadora.getOperador())switch (Calculadora.getOperador()) {
+                if (Calculadora.getOperador()!= null)switch (Calculadora.getOperador()) {
                 case "+":
                     Calculadora.setResultado(Calculadora.getValor1() + Calculadora.getValor2());
                     resposta = Double.toString(Calculadora.getResultado());
@@ -572,7 +572,6 @@ public class FrmCalculadora extends javax.swing.JFrame {
             }
         }
         catch(NumberFormatException e){
-            
         }
     }//GEN-LAST:event_jEqualsActionPerformed
 
@@ -581,7 +580,6 @@ public class FrmCalculadora extends javax.swing.JFrame {
             Calculadora.setValorMemoria((Calculadora.getValorMemoria()) + Double.parseDouble(jVisor.getText()));
         }
         catch(NumberFormatException e){
-            
         }
     }//GEN-LAST:event_jBotaoMplusActionPerformed
 
@@ -590,7 +588,6 @@ public class FrmCalculadora extends javax.swing.JFrame {
             jVisor.setText(Double.toString(Calculadora.getValorMemoria()));
         }
         catch(NumberFormatException e){
-            
         }
     }//GEN-LAST:event_jBotaoMRActionPerformed
 
@@ -609,7 +606,6 @@ public class FrmCalculadora extends javax.swing.JFrame {
             Calculadora.setValorMemoria((Calculadora.getValorMemoria()) - Double.parseDouble(jVisor.getText()));
         }
         catch(NumberFormatException e){
-            
         }
     }//GEN-LAST:event_jBotaoMminusActionPerformed
 
@@ -684,7 +680,6 @@ public class FrmCalculadora extends javax.swing.JFrame {
             jVisor.setText(Double.toString(ops));
         }
         catch(NumberFormatException e){
-            
         }
     }//GEN-LAST:event_jPlusOrMinusActionPerformed
 
@@ -693,7 +688,6 @@ public class FrmCalculadora extends javax.swing.JFrame {
             Calculadora.setValorMemoria(Double.parseDouble(jVisor.getText()));
         }
         catch(NumberFormatException e){
-            
         }
     }//GEN-LAST:event_jBotaoMStorageActionPerformed
 
