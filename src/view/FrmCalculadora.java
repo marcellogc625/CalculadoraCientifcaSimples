@@ -546,7 +546,7 @@ public class FrmCalculadora extends javax.swing.JFrame {
         try{
             String resposta;
             Calculadora.setValor2(Double.parseDouble(jVisor.getText()));     
-                if (Calculadora.getOperador()!= null)switch (Calculadora.getOperador()) {
+                if (Calculadora.getOperador()!= null)switch(Calculadora.getOperador()){
                 case "+":
                     Calculadora.setResultado(Calculadora.getValor1() + Calculadora.getValor2());
                     resposta = Double.toString(Calculadora.getResultado());
